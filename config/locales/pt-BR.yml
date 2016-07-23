@@ -1,0 +1,46 @@
+pt-BR:
+  general:
+    form_error: "Há erros no formulário, por favor corrija-os!"
+    confirm: "Tem Certeza?"
+  users:
+    new:
+      title: Cadastro
+    edit:
+      title: Editar Cadastro
+    show:
+      title: "Perfil: %{user_name}"
+      edit: "Editar Perfil"
+      location: "Localização: %{location}"
+      bio: "Bio: %{bio}"
+  rooms:
+    new:
+      title: Novo Quarto
+    edit:
+      title: Edição de Quarto
+    index:
+      title: "Listagem de Quartos"
+      new: "Novo Quarto"
+  links:
+    back: Voltar
+    show: Detalhes
+    edit: Editar
+    destroy: Remover
+  layout:
+    rooms: Quartos
+    signup: Cadastro
+  activerecord:
+    models:
+      room: Quarto
+      user: Usuário
+    attributes:
+      user:
+        bio: Biografia
+        email: Email
+        full_name: Nome Completo
+        location: Localização
+        password: Senha
+        password_confirmation: Confirme sua Senha
+      room:
+        description: Descrição
+        location: Localização
+        title: Título
