@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :users
   end
 
+  resource :confirmation, only: [:show]
   get '/:locale' => 'home#index', locale: LOCALES
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
