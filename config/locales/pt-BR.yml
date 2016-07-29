@@ -1,4 +1,8 @@
 pt-BR:
+  user_sessions:
+    new:
+      title: "Login"
+      sign_up: "Cadastre-se"
   confirmations:
     success: "Email confirmado com sucesso, obrigado!"
   general:

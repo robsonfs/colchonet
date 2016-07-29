@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
 
   resource :confirmation, only: [:show]
+  resource :user_sessions, only: [:create, :new, :destroy]
   get '/:locale' => 'home#index', locale: LOCALES
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
