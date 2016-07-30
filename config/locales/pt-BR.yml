@@ -61,3 +61,17 @@ pt-BR:
 
       confirm_link_html: "Para você começar a utilizar o site, acesse o link: %{link}."
       thanks_html: Obrigado por se cadastrar no %{link}.
+  activemodel:
+    attributes:
+      user_session:
+        email: "Email"
+        password: "Senha"
+      errors:
+        messages:
+          invalid_login: "Usuário ou senha inválidos"
+
+  helpers:
+    submit:
+      user_session:
+        create: "Entrar"
+        
