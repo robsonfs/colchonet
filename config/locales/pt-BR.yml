@@ -66,12 +66,19 @@ pt-BR:
       user_session:
         email: "Email"
         password: "Senha"
-      errors:
-        messages:
-          invalid_login: "Usuário ou senha inválidos"
+    errors:
+      models:
+        user_session:
+          attributes:
+            base:
+              invalid_login: "Usuário ou senha inválidos"
 
   helpers:
     submit:
       user_session:
         create: "Entrar"
-        
+
+  flash:
+    notice:
+      signed_in: "Login efetuado com sucesso!"
+      signed_in: "Login efetuado com sucesso!"

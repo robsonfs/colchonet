@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  # Validations
   EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
   validates_presence_of :email, :full_name, :location
   validates_length_of :bio, minimum: 30, allow_blank: false
@@ -7,8 +8,15 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
+  # Scopes
+  scope :confirmed, -> { where.not(confirmed_at: nil)}
+
   before_create do |user|
     user.confirmation_token = SecureRandom.urlsafe_base64
+  end
+
+  def self.authenticate(email, password)
+    user = confirmed.find_by(email: email).try(:authenticate, password)
   end
 
   def confirm!
