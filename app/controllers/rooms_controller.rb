@@ -14,6 +14,7 @@ class RoomsController < ApplicationController
 
   # GET /rooms/new
   def new
+    require_authentication
     @room = Room.new
   end
 

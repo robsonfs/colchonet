@@ -32,8 +32,13 @@ pt-BR:
     edit: Editar
     destroy: Remover
   layout:
-    rooms: Quartos
-    signup: Cadastro
+    rooms: "Quartos"
+    new_room: "Cadastre seu quarto!"
+    signup: "Cadastro"
+    signin: "Login"
+    my_profile: "Meu Perfil"
+    signout: "Logout"
+
   activerecord:
     models:
       room: Quarto
@@ -82,3 +87,5 @@ pt-BR:
     notice:
       signed_in: "Login efetuado com sucesso!"
       signed_in: "Login efetuado com sucesso!"
+      signed_out: "Logout efetuado com sucesso. Até Logo!"
+      already_logged_in: "Você já está logado!"

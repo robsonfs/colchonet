@@ -21,7 +21,19 @@ class UserSession
     end
   end
 
+  def current_user
+    User.find(@session[:user_id])
+  end
+
+  def user_signed_in?
+    @session[:user_id].present?
+  end
+
   def store(user)
     @session[:user_id] = user.id
+  end
+
+  def destroy
+    @session[:user_id] = nil
   end
 end
