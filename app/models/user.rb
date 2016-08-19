@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
+  # Associations
+  has_many :rooms
+
   # Scopes
   scope :confirmed, -> { where.not(confirmed_at: nil)}
 
