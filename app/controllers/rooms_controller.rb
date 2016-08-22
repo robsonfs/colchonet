@@ -5,7 +5,7 @@
   before_action :set_room, only: [:show, :edit, :update, :destroy]
 
   def index
-    @rooms = Room.all
+    @rooms = Room.most_recent
   end
 
   def show
