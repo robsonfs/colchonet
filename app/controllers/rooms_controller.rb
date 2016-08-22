@@ -1,4 +1,4 @@
-class RoomsController < ApplicationController
+  class RoomsController < ApplicationController
   before_action :require_authentication, only: [
       :new, :edit, :create, :update, :destroy
     ]
@@ -12,18 +12,17 @@ class RoomsController < ApplicationController
   end
 
   def new
-    @room = Room.new
+    @room = current_user.rooms.build
   end
 
   def edit
   end
 
   def create
-    @room = Room.new(room_params)
+    @room = current_user.rooms.build(room_params)
 
     if @room.save
       redirect_to @room, notice: t('flash.notice.room_created')
-      format.json { render :show, status: :created, location: @room }
     else
       render :new
     end
@@ -46,7 +45,7 @@ class RoomsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_room
-      @room = Room.find(params[:id])
+      @room = current_user.rooms.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
