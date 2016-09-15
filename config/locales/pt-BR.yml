@@ -1,4 +1,6 @@
 pt-BR:
+  dialogs:
+    destroy: "Você tem certeza que quer remover?"
   user_sessions:
     new:
       title: "Login"
@@ -24,8 +26,12 @@ pt-BR:
     edit:
       title: Edição de Quarto
     index:
-      title: "Listagem de Quartos"
+      title: "Quartos disponíveis"
       new: "Novo Quarto"
+    room:
+      owner_html: "&mdash; %{owner} (%{when})"
+      edit: "Editar"
+      destroy: "Remover"
   links:
     back: Voltar
     show: Detalhes
@@ -86,6 +92,6 @@ pt-BR:
   flash:
     notice:
       signed_in: "Login efetuado com sucesso!"
-      signed_in: "Login efetuado com sucesso!"
       signed_out: "Logout efetuado com sucesso. Até Logo!"
       already_logged_in: "Você já está logado!"
+      room_created: "Quarto criado com sucesso!"
