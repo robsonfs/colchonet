@@ -95,3 +95,5 @@ pt-BR:
       signed_out: "Logout efetuado com sucesso. Até Logo!"
       already_logged_in: "Você já está logado!"
       room_created: "Quarto criado com sucesso!"
+    alert:
+      needs_login: "Login requerido!"
