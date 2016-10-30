@@ -9,7 +9,8 @@ class User < ActiveRecord::Base
   has_secure_password
 
   # Associations
-  has_many :rooms
+  has_many :rooms, dependent: :destroy
+  has_many :reviews, dependent: :destroy
 
   # Scopes
   scope :confirmed, -> { where.not(confirmed_at: nil)}

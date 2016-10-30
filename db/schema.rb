@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161030082018) do
+ActiveRecord::Schema.define(version: 20161030083626) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "user_id"
@@ -24,12 +24,13 @@ ActiveRecord::Schema.define(version: 20161030082018) do
   add_index "reviews", ["user_id", "room_id"], name: "index_reviews_on_user_id_and_room_id", unique: true
 
   create_table "rooms", force: :cascade do |t|
-    t.string   "title",       null: false
-    t.string   "location",    null: false
-    t.text     "description", null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "title",         null: false
+    t.string   "location",      null: false
+    t.text     "description",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "user_id"
+    t.integer  "reviews_count"
   end
 
   add_index "rooms", ["user_id"], name: "index_rooms_on_user_id"
